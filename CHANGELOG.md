@@ -1,3 +1,11 @@
+## 3.1.0 (2016-12-05)
+
+
+#### Bug Fixes
+
+* **nominatim:** add button type to resolve issue with parent form submission ([dd6719f9](https://github.com/ubilabs/react-geosuggest/commit/dd6719f99e4646e947e5a88fb48300dc782774cb))
+
+
 ## 3.0.0 (2016-11-28)
 
 
