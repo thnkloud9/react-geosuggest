@@ -463,6 +463,7 @@ class Geosuggest extends React.Component {
         onSelect={this.onSelect}
         onEscape={this.hideSuggests} {...attributes} />,
       button = <button className={this.props.buttonClassName}
+        type='button'
         onClick={this.onButtonClick}>{this.props.buttonText}</button>,
       suggestionsList = <SuggestList isHidden={this.state.isSuggestsHidden}
         style={this.props.style.suggests}
