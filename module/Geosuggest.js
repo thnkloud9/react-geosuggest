@@ -48,8 +48,6 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -547,19 +545,24 @@ var Geosuggest = function (_React$Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _extends2;
-
       var attributes = (0, _filterInputAttributes2.default)(this.props),
           classes = (0, _classnames2.default)('geosuggest', this.props.className, { 'geosuggest--loading': this.state.isLoading }),
           shouldRenderLabel = this.props.label && attributes.id,
           shouldRenderButton = this.props.useNominatim,
-          input = _react2.default.createElement(_input2.default, _extends((_extends2 = { className: this.props.inputClassName,
+          input = _react2.default.createElement(_input2.default, _extends({ className: this.props.inputClassName,
         ref: 'input',
         value: this.state.userInput,
         ignoreEnter: !this.state.isSuggestsHidden,
         ignoreTab: this.props.ignoreTab,
-        style: this.props.style.input
-      }, _defineProperty(_extends2, 'className', this.useNominatim ? 'geosuggest__input--nominatim' : ''), _defineProperty(_extends2, 'onChange', this.onInputChange), _defineProperty(_extends2, 'onFocus', this.onInputFocus), _defineProperty(_extends2, 'onBlur', this.onInputBlur), _defineProperty(_extends2, 'onKeyPress', this.props.onKeyPress), _defineProperty(_extends2, 'onNext', this.onNext), _defineProperty(_extends2, 'onPrev', this.onPrev), _defineProperty(_extends2, 'onSelect', this.onSelect), _defineProperty(_extends2, 'onEscape', this.hideSuggests), _extends2), attributes)),
+        style: this.props.style.input,
+        onChange: this.onInputChange,
+        onFocus: this.onInputFocus,
+        onBlur: this.onInputBlur,
+        onKeyPress: this.props.onKeyPress,
+        onNext: this.onNext,
+        onPrev: this.onPrev,
+        onSelect: this.onSelect,
+        onEscape: this.hideSuggests }, attributes)),
           button = _react2.default.createElement(
         'button',
         { className: this.props.buttonClassName,
