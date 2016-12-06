@@ -1,3 +1,11 @@
+## 3.2.0 (2016-12-06)
+
+
+#### Bug Fixes
+
+* **nominatim:** fix override for inputClassName ([7585bfb4](https://github.com/ubilabs/react-geosuggest/commit/7585bfb4256af45c116f5788c06c4eec893a813a))
+
+
 ## 3.1.0 (2016-12-05)
 
 
