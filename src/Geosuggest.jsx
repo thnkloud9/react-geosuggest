@@ -420,8 +420,8 @@ class Geosuggest extends React.Component {
       if (this.props.geocodeProvider) {
         // use props defined geocodeProvider
         this.props.geocodeProvider.geocode(suggest)
-        .then(geocdedResults => {
-          this.props.onSuggestSelect(geocdedResults);
+        .then(geocodedResults => {
+          this.props.onSuggestSelect(geocodedResults);
         });
       } else {
         // use default google geocode lib

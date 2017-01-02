@@ -17,6 +17,8 @@ describe('Component: Geosuggest with Google APIs', () => {
     onChange = null,
     onBlur = null,
     onSuggestResults = null,
+    onSuggestsLookup = null,
+    onGeocodeSuggest = null,
     render = props => {
       onSuggestSelect = sinon.spy();
       onActivateSuggest = sinon.spy();
@@ -26,6 +28,8 @@ describe('Component: Geosuggest with Google APIs', () => {
       onKeyPress = sinon.spy();
       onBlur = sinon.spy();
       onSuggestResults = sinon.spy();
+      onSuggestsLookup = sinon.spy();
+      onGeocodeSuggest = sinon.spy();
 
       component = TestUtils.renderIntoDocument(
         <Geosuggest
@@ -39,6 +43,8 @@ describe('Component: Geosuggest with Google APIs', () => {
           onKeyPress={onKeyPress}
           onBlur={onBlur}
           onSuggestResults={onSuggestResults}
+          onSuggestsLookup={onSuggestsLookup}
+          onGeocodeSuggest={onGeocodeSuggest}
           style={{
             'input': {
               'borderColor': '#000'
@@ -513,8 +519,8 @@ describe('Component: Geosuggest with Google APIs', () => {
   describe('with geocodeProvider', () => {
     let geocodeProviderStub,
       geocodeProvider = {
-        geocode: (suggest) => suggest,
-        lookup: (userInput) => userInput
+        geocode: suggest => suggest,
+        lookup: userInput => userInput
       },
       lookupPromise = new Promise(() => {
         return [{

@@ -24,7 +24,7 @@
     </h2>
     <div id="app-nominatim"></div>
     <div class="hint">
-      Suggestions will not load until focus is changed away from the input field!
+      Suggestions will not load until Search button is clicked.
       Implemented using onSuggestLookup, onGeocodeSuggest, and disableAutoLookup properties.
     </div>
 
@@ -33,8 +33,21 @@
     </div>
 
     <!-- TODO: add example using geocodeProvider with Google PlacesService for lookup and geocode -->
+    <h2 class="subheader">
+      Open Street Maps Nominatim Suggest for <a href="http://facebook.github.io/react/" title="React.js">React.js</a>
+    </h2>
+    <div id="app-geocode-provider"></div>
+    <div class="hint">
+      Suggestions will not load until Search button is clicked.
+      Implemented using geocodeProvider property.
+    </div>
+
+    <div class="footer">
+      <a href="https://github.com/ubilabs/react-geosuggest">View project on GitHub</a>. Made by <a href="http://www.ubilabs.net/en" title="Ubilabs"><img src="ubilabs.svg" alt="Ubilabs" class="ubilabs" width="100"></a>
+    </div>
   </div>
 
   <script src="app.js"></script>
   <script src="app-nominatim.js"></script>
+  <script src="app-geocode-provider.js"></script>
 </body>
